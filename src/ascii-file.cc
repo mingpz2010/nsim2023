@@ -26,7 +26,7 @@
 #include "fatal-impl.h"
 
 #include <iostream>
-#include <string>
+#include <cstring>
 
 namespace nsim2023
 {

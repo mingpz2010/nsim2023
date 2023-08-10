@@ -27,9 +27,10 @@
 #include "make-event.h"
 #include "nstime.h"
 #include "object-factory.h"
+#include "string"
 
 #include <stdint.h>
-#include <string>
+#include <cstring>
 
 
 namespace nsim2023

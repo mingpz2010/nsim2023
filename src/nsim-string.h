@@ -19,43 +19,27 @@
     THE SOFTWARE.
 */
 
-#ifndef ASCII_FILE_H
-#define ASCII_FILE_H
+#ifndef NSIM2023_STRING_H
+#define NSIM2023_STRING_H
 
-#include <fstream>
-#include <stdint.h>
-#include <cstring>
+#include "attribute-helper.h"
+
+#include <string>
 
 namespace nsim2023
 {
 
-// This class represents an ascii file
-class AsciiFile
-{
-  public:
-    AsciiFile();
-    ~AsciiFile();
-
-    bool Fail() const;
-
-    bool Eof() const;
-
-    void Open(const std::string& filename, std::ios::openmode mode);
-
-    void Close();
-
-    void Read(std::string& line);
-
-    // Compare two ASCII files line-by-line
-    // true if files are different, false otherwise
-    static bool Diff(const std::string& f1, const std::string& f2, uint64_t& lineNumber);
-
-  private:
-    std::string m_filename; //!< output file name
-    std::fstream m_file;    //!< output file
-};
+/**
+ * Hold variables of type string
+ *
+ * This class can be used to hold variables of type string,
+ * that is, either char * or std::string.
+ */
+ATTRIBUTE_VALUE_DEFINE_WITH_NAME(std::string, String);
+ATTRIBUTE_ACCESSOR_DEFINE(String);
+ATTRIBUTE_CHECKER_DEFINE(String);
 
 }
 
-#endif /* ASCII_FILE_H */
+#endif
 

@@ -25,7 +25,7 @@
 #include "attribute.h"
 #include "log.h"
 #include "object-factory.h"
-#include "string.h"
+#include "nsim-string.h"
 
 #include <cstdlib>
 #include <cstring>

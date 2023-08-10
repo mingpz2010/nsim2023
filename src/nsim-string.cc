@@ -19,7 +19,7 @@
     THE SOFTWARE.
 */
 
-#include "string.h"
+#include "nsim-string.h"
 
 
 namespace nsim2023

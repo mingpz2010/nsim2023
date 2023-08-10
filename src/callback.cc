@@ -136,7 +136,7 @@ CallbackImplBase::Demangle(const std::string& mangled)
 #else
 
 std::string
-ns3::CallbackImplBase::Demangle(const std::string& mangled)
+nsim2023::CallbackImplBase::Demangle(const std::string& mangled)
 {
     NS_LOG_FUNCTION(this << mangled);
     return mangled;

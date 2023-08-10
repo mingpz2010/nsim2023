@@ -23,7 +23,7 @@
 
 #include "attribute-construction-list.h"
 #include "log.h"
-#include "string.h"
+#include "nsim-string.h"
 #include "trace-source-accessor.h"
 
 #include "core-config.h"

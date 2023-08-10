@@ -24,15 +24,13 @@
 
 #include "simple-ref-count.h"
 
-#include <cstring> // memcpy
+#include <cstring>
 
 namespace nsim2023
 {
 
-
 namespace Hash
 {
-
 
 class Implementation : public SimpleRefCount<Implementation>
 {
@@ -41,6 +39,7 @@ class Implementation : public SimpleRefCount<Implementation>
      * Compute 32-bit hash of a byte buffer
      */
     virtual uint32_t GetHash32(const char* buffer, const std::size_t size) = 0;
+
     /**
      * Compute 64-bit hash of a byte buffer.
      *
@@ -48,6 +47,7 @@ class Implementation : public SimpleRefCount<Implementation>
      *
      */
     virtual uint64_t GetHash64(const char* buffer, const std::size_t size);
+
     /**
      * Restore initial state.
      */
@@ -79,8 +79,7 @@ namespace Function
 class Hash32 : public Implementation
 {
   public:
-    Hash32(Hash32Function_ptr hp)
-        : m_fp(hp)
+    Hash32(Hash32Function_ptr hp) : m_fp(hp)
     {
     }
 
@@ -102,8 +101,7 @@ class Hash64 : public Implementation
 {
   public:
 
-    Hash64(Hash64Function_ptr hp)
-        : m_fp(hp)
+    Hash64(Hash64Function_ptr hp) : m_fp(hp)
     {
     }
 
@@ -117,7 +115,7 @@ class Hash64 : public Implementation
         uint32_t hash32;
         uint64_t hash64 = GetHash64(buffer, size);
 
-        memcpy(&hash32, &hash64, sizeof(hash32));
+        std::memcpy(&hash32, &hash64, sizeof(hash32));
         return hash32;
     }
 

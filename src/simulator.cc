@@ -31,7 +31,7 @@
 #include "ptr.h"
 #include "scheduler.h"
 #include "simulator-impl.h"
-#include "string.h"
+#include "nsim-string.h"
 
 #include "core-config.h"
 

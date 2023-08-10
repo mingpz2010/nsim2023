@@ -1,6 +1,7 @@
+# The Makefile for compiling the *.so library
 CXX ?= g++
 AR := ar
-CXXFLAGS := -O2 -DNDEBUG -fPIC -fno-semantic-interposition -Wall -std=gnu++17
+CXXFLAGS := -g -O2 -DNDEBUG -fPIC -fno-semantic-interposition -Wall -std=gnu++17 -DNSIM2023_LOG_ENABLE
 DBGFLAGS := -g
 COBJFLAGS := $(CXXFLAGS) -c
 

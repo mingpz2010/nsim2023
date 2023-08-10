@@ -19,28 +19,14 @@
     THE SOFTWARE.
 */
 
-#ifndef NSIM2023_STRING_H
-#define NSIM2023_STRING_H
+#include "simulator.h"
 
-#include "attribute-helper.h"
+#include <iostream>
 
-#include <string>
+using namespace nsim2023;
 
-
-namespace nsim2023
+int main(int argc, char* argv[])
 {
-
-/**
- * Hold variables of type string
- *
- * This class can be used to hold variables of type string,
- * that is, either char * or std::string.
- */
-ATTRIBUTE_VALUE_DEFINE_WITH_NAME(std::string, String);
-ATTRIBUTE_ACCESSOR_DEFINE(String);
-ATTRIBUTE_CHECKER_DEFINE(String);
-
+    return 0;
 }
-
-#endif
 

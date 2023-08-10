@@ -26,7 +26,7 @@
 #include "simple-ref-count.h"
 
 #include <stdint.h>
-#include <string>
+#include <cstring>
 
 namespace nsim2023
 {

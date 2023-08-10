@@ -24,7 +24,7 @@
 #include "attribute.h"
 #include "fatal-error.h"
 #include "log.h"
-#include "string.h"
+#include "nsim-string.h"
 #include "uinteger.h"
 
 #include "core-config.h"
